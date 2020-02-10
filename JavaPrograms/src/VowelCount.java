@@ -12,26 +12,28 @@ public class VowelCount {
 		//                                       and count vowels
 		char chars[] = str.toCharArray();
 		
-		int count=0;
+		int vcount=0;
+		int ccount=0;
 		//Use for-each loop. 
 		//1. This loop iterates through each item in the given collection or array
 		//2. stores each item in a variable (item)
 		//3. and executes the body of the loop.
 		for(char c :chars)
 		{
-			switch(c)
+			
+			if(c=='a'|| c=='e'|| c== 'i' || c=='o' ||c=='u')
 			{
-			case 'a':
-			case 'e':
-			case 'i':
-			case 'o':
-			case 'u':
-				count++;
-				break;
+				vcount++;
 			}
+			else if ((c >= 'a'&& c <= 'z'))
+			{
+				ccount++;
+			}
+			
 		}
 		
-		System.out.println("No of vowels in " +str+ " is: "+ count);
+		System.out.println("No of vowels in " +str+ " is: "+ vcount);
+		System.out.println("No of Consonents in " +str+ " is: "+ ccount);
 
 	}
 
